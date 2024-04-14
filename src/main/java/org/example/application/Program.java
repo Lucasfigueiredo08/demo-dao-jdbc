@@ -2,10 +2,7 @@ package org.example.application;
 
 import org.example.model.dao.DaoFactory;
 import org.example.model.dao.SellerDao;
-import org.example.model.entities.Department;
 import org.example.model.entities.Seller;
-
-import java.util.Date;
 
 public class Program {
 
@@ -13,6 +10,7 @@ public class Program {
 
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
+        System.out.println("=== TEST 1: seller findById");
         Seller seller = sellerDao.findById(3);
 
         System.out.println(seller);
