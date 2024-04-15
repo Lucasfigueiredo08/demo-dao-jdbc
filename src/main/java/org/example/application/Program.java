@@ -32,10 +32,21 @@ public class Program {
             System.out.println(s);
         }
 
-        System.out.println("\n=== TEST 5: seller Insert ===");
+        System.out.println("\n=== TEST 4: seller Insert ===");
         Seller newSeller = new Seller(null, "Lucas", "lucas@teste.com", new Date(), 4000.0, department);
         sellerDao.insert(newSeller);
         System.out.println("Novo usuário criado: " + newSeller.getId());
+
+        System.out.println("\n=== TEST 5: seller Update ===");
+        seller = sellerDao.findById(1);
+        seller.setName("Amanda");
+//        seller.setBaseSalary(5000.0);
+//        seller.setEmail("Amanda@gmail.com");
+//        seller.setDepartment(department);
+//        seller.setBirthDate(new Date());
+        sellerDao.update(seller);
+        System.out.println("Updated completed!!");
+
 
 
     }
