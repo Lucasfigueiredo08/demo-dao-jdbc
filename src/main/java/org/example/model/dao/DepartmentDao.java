@@ -2,6 +2,7 @@ package org.example.model.dao;
 
 import org.example.model.entities.Department;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface DepartmentDao {
